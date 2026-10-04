@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ફરંગટા ગ્રામ પંચાયત</title>
+<style>
+*{box-sizing:border-box}
+:root{--green:#0a6b46;--green2:#0f8a5a;--dark:#073d2d;--mint:#eef8f3;--gold:#d9a928;--blue:#1378d1;--text:#17352b;--muted:#66776f;--line:#dcebe4}
+body{margin:0;font-family:"Nirmala UI","Noto Sans Gujarati",Arial,sans-serif;background:#f5f8f6;color:var(--text)}
+a{color:var(--green2)}
+.top{background:#fff;border-bottom:1px solid #dbe8e2;position:sticky;top:0;z-index:20;box-shadow:0 2px 12px #0000000c}
+.brand{display:flex;align-items:center;gap:14px;padding:10px 22px;max-width:1400px;margin:auto}
+.logo{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,#fff,#eaf7ef);border:4px solid #e7b72f;display:grid;place-items:center;font-size:32px;flex:0 0 auto}
+.brand h1{margin:0;font-size:25px;color:#123d31;line-height:1.15}.brand .en{font-weight:800}.brand .guj{font-size:17px;font-weight:800}.tag{font-size:12px;color:#557068;margin-top:3px}
+.topmeta{margin-left:auto;display:flex;align-items:center;gap:16px;font-size:13px;color:#425c53}.metaItem{padding:8px 12px;border-left:1px solid #dbe8e2}.adminBtn{background:var(--green);color:#fff;border:0;border-radius:9px;padding:11px 16px;font-weight:800;cursor:pointer}
+nav{background:linear-gradient(90deg,#07563a,#0b7650);display:flex;overflow:auto;white-space:nowrap;box-shadow:0 2px 8px #0002;position:sticky;top:89px;z-index:19}nav button{border:0;border-right:1px solid #ffffff25;background:transparent;color:#fff;padding:13px 16px;font-weight:800;cursor:pointer;min-width:max-content}nav button:hover,nav button.active{background:#20a86f}
+main{max-width:1400px;margin:auto;padding:0 18px 30px}.hidden{display:none!important}
+.hero{margin:14px 0;border-radius:18px;overflow:hidden;min-height:250px;background:linear-gradient(120deg,#064d36 0%,#0a7450 45%,#2b805c 70%,#173f31 100%);position:relative;color:#fff;box-shadow:0 8px 25px #073d2d25}.hero:after{content:"🏡";position:absolute;right:6%;bottom:-10px;font-size:150px;opacity:.12}.heroInner{padding:42px 38px;position:relative;z-index:1}.hero h2{font-size:38px;margin:0 0 8px}.hero p{font-size:16px;max-width:650px;margin:0;color:#e8fff4}.stats{position:absolute;right:25px;top:25px;width:300px;background:#063d30d9;border:1px solid #ffffff25;border-radius:16px;padding:18px}.stats h3{margin:0 0 10px}.statline{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #ffffff1c}.statline:last-child{border-bottom:0}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:15px 0}.quick .tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 3px 12px #00000008;cursor:pointer}.tile b{display:block;color:var(--green);font-size:17px;margin-bottom:4px}.tile span{font-size:13px;color:var(--muted)}
+.sectionHead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 0 10px}.sectionHead h2{margin:0;font-size:23px}.sectionHead .more{font-weight:800;color:var(--green);cursor:pointer}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;box-shadow:0 3px 14px #00000008}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}.grid{display:grid;grid-template-columns:2.2fr 1fr;gap:16px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.workGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.workCard{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 4px 16px #0000000a}.workCard img{width:100%;height:190px;object-fit:cover;display:block}.workBody{padding:13px}.badge{display:inline-block;background:#20a86f;color:#fff;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:800;margin-bottom:7px}.workBody h3{margin:2px 0 8px;font-size:17px}.workBody p{margin:5px 0;color:#5e6f67;font-size:13px}.workStatus{display:inline-block;margin:0 0 7px 6px;padding:4px 9px;border-radius:999px;font-size:11px;font-weight:800;background:#eef8f3;color:#0a6b46}.workActions{padding:0 13px 13px}.photoBtn{display:block;text-align:center;background:var(--blue);color:#fff;text-decoration:none;border-radius:9px;padding:10px;font-weight:800}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.gallery .g{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff}.gallery img{width:100%;height:115px;object-fit:cover;display:block}.gallery .cap{padding:8px;font-size:12px;font-weight:800}
+.sideList .sitem{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.thumb{width:62px;height:48px;border-radius:8px;object-fit:cover;background:#dcebe4}.sideList .sitem:last-child{border-bottom:0}
+.callout{background:linear-gradient(135deg,#e8f8ee,#d8f0e3);border:1px solid #c7e5d3;border-radius:15px;padding:18px}.callout h3{margin:0 0 8px;color:var(--green)}
+input,textarea,select{width:100%;padding:12px;border:1px solid #ccdcd4;border-radius:10px;margin:6px 0 12px;font-family:inherit;background:#fff}label{font-weight:800;font-size:14px}.primary{background:var(--green2);color:#fff;border:0;padding:11px 17px;border-radius:10px;font-weight:800;cursor:pointer}.danger{background:#b3261e;color:#fff;border:0;padding:9px 13px;border-radius:9px;font-weight:800;cursor:pointer}.secondary{background:#e7f5ed;color:var(--green);border:0;padding:9px 13px;border-radius:9px;font-weight:800;cursor:pointer}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.item{border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0;background:#fbfdfc}.muted{color:var(--muted);font-size:13px}.error{color:#b3261e;font-weight:800}.success{color:#087a43;font-weight:800}.status{padding:8px 12px;background:#fff1b8;border-radius:20px;font-weight:bold}.complaintStatus{padding:10px 14px;border-radius:12px;background:#eef8f3;border-left:5px solid var(--green);margin-top:10px}.trackBox{background:#f4faf7;border:1px dashed #9bcab4;border-radius:14px;padding:16px;margin-top:14px}.actionBox{background:#fffaf0;border:1px solid #f0d48a;border-radius:12px;padding:12px;margin-top:10px}
+footer{background:#073d30;color:#fff;padding:25px 18px;margin-top:25px}.foot{max-width:1400px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot small{color:#cce5d9}
+@media(max-width:1000px){.topmeta{display:none}.quick{grid-template-columns:repeat(2,1fr)}.workGrid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.stats{position:static;width:auto;margin-top:18px}.hero{min-height:0}.heroInner{padding:30px 22px}}
+@media(max-width:650px){.brand{padding:8px 12px}.logo{width:54px;height:54px;font-size:25px}.brand h1{font-size:18px}.brand .guj{font-size:14px}.tag{font-size:10px}.hero h2{font-size:28px}.quick{grid-template-columns:1fr 1fr}.workGrid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.gallery img{height:105px}.two{grid-template-columns:1fr}main{padding:0 10px 20px}}
+</style>
+<script>
+// Basic page navigation works even if Firebase/Google scripts are slow or unavailable.
+window.show = function(id, btn){
+  document.querySelectorAll("main section").forEach(function(sec){ sec.classList.add("hidden"); });
+  var target=document.getElementById(id);
+  if(target) target.classList.remove("hidden");
+  document.querySelectorAll("nav button").forEach(function(b){ b.classList.remove("active"); });
+  if(btn) btn.classList.add("active");
+  window.scrollTo(0,0);
+};
+</script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import { getFirestore, doc, getDoc, collection, addDoc, getDocs, query, where, orderBy, serverTimestamp, deleteDoc, updateDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+const firebaseConfig = {
+ apiKey:"AIzaSyCQ9c1q0_jjyUDrsDh6RVpZOnglZx30UTc",
+ authDomain:"farangta-gram-panchayat.firebaseapp.com",
+ projectId:"farangta-gram-panchayat",
+ storageBucket:"farangta-gram-panchayat.firebasestorage.app",
+ messagingSenderId:"916806611666",
+ appId:"1:916806611666:web:76430240c1dc0f4b6f330b",
+ measurementId:"G-G3MPJ9F0BG"
+};
+const app=initializeApp(firebaseConfig), auth=getAuth(app), db=getFirestore(app);
+window.db=db; window.auth=auth;
+
+window.show=(id,btn)=>{
+ document.querySelectorAll("main section").forEach(s=>s.classList.add("hidden"));
+ document.getElementById(id).classList.remove("hidden");
+ document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
+ if(btn)btn.classList.add("active"); scrollTo(0,0);
+};
+
+window.login=async()=>{
+ try{await signInWithPopup(auth,new GoogleAuthProvider())}
+ catch(e){document.getElementById("adminMsg").innerHTML='<div class="error">Login error: '+e.message+'</div>'}
+};
+window.logout=()=>signOut(auth);
+
+async function isAdmin(user){
+ const snap=await getDoc(doc(db,"admins","admin"));
+ return snap.exists() && snap.data().uid===user.uid;
+}
+
+function workStatus(x){return x.status||'ચાલુ';}
+function workStatusLabel(status){return status==='પૂર્ણ'?'પૂર્ણ થયું':status==='બાકી'?'બાકી':'ચાલુ';}
+window.loadPublic=async(col,target,emptyText)=>{
+ const el=document.getElementById(target); if(!el)return;
+ try{
+  const snap=await getDocs(collection(db,col)); el.innerHTML="";
+  if(snap.empty){el.innerHTML='<div class="muted">'+emptyText+'</div>';return;}
+  if(col==="works"){
+   const grid=document.createElement("div");grid.className="workGrid";
+   snap.forEach(d=>{const x=d.data(), card=document.createElement("article");card.className="workCard";
+    if(x.photo){const img=document.createElement("img");img.src=x.photo;img.alt=x.title||"વિકાસ કામ";card.appendChild(img)}
+    const body=document.createElement("div");body.className="workBody";body.innerHTML='<span class="badge">વિકાસ કામ</span><span class="workStatus"></span><h3></h3><p></p>';body.querySelector('.workStatus').textContent=workStatusLabel(workStatus(x));body.querySelector('h3').textContent=x.title||"";body.querySelector('p').textContent=x.details||"";card.appendChild(body);
+    if(x.photo){const a=document.createElement("div");a.className="workActions";a.innerHTML='<a class="photoBtn" href="#" onclick="return false">📷 ફોટો / વિગત જુઓ</a>';card.appendChild(a)}
+    grid.appendChild(card);
+   }); el.appendChild(grid); return;
+  }
+  const wrap=document.createElement("div");wrap.className="grid";
+  snap.forEach(d=>{const x=d.data();const p=document.createElement("div");p.className="item";const b=document.createElement("b");const q=document.createElement("p");b.textContent=x.title||"";q.textContent=x.details||"";p.appendChild(b);p.appendChild(q);wrap.appendChild(p)});
+  el.appendChild(wrap);
+ }catch(e){el.innerHTML='<div class="error">માહિતી લોડ કરવામાં સમસ્યા. કૃપા કરીને ફરી Refresh કરો.</div>';console.error(col,e)}
+};
+window.loadPublic("notices","publicNotices","હાલમાં કોઈ નવી સૂચના નથી.");
+window.loadPublic("works","publicWorks","હાલમાં કોઈ કામની માહિતી નથી.");
+window.loadPublic("news","publicNewsList","હાલમાં કોઈ સમાચાર નથી.");
+
+onAuthStateChanged(auth, async user=>{
+ const box=document.getElementById("adminArea"), msg=document.getElementById("adminMsg");
+ if(!user){box.innerHTML='<button class="primary" onclick="login()">🔐 Google થી Admin Login</button>';msg.innerHTML="";return;}
+ msg.innerHTML="ચેકિંગ...";
+ try{
+   if(await isAdmin(user)){
+     box.innerHTML='<div class="success">✅ Admin Login: '+(user.email||"")+'</div><button class="secondary" onclick="logout()">Logout</button>';
+     document.getElementById("dashboard").classList.remove("hidden");
+     msg.innerHTML='<span class="success">Admin access મંજૂર છે.</span>';
+     loadAll();
+   }else{
+     box.innerHTML='<div class="error">❌ આ Google account Admin નથી.</div><button class="secondary" onclick="logout()">Logout</button>';
+     document.getElementById("dashboard").classList.add("hidden");
+     msg.innerHTML="તમારા Firebase UID ને Firestore → admins → admin → uid માં નાખો.";
+   }
+ }catch(e){
+   msg.innerHTML='<div class="error">Admin check error: '+e.message+'</div>';
+ }
+});
+
+async function addItem(col,title,details){
+ if(!title.trim()) return alert("નામ/શીર્ષક લખો.");
+ await addDoc(collection(db,col),{title:title.trim(),details:details.trim(),createdAt:serverTimestamp()});
+ alert("સફળતાપૂર્વક ઉમેરાયું."); loadAll();
+}
+window.addNotice=()=>addItem("notices",noticeTitle.value,noticeDetails.value);
+window.addNews=()=>addItem("news",newsTitle.value,newsDetails.value);
+
+async function photoToDataUrl(file){
+ if(!file) return "";
+ if(!file.type.startsWith("image/")){alert("કૃપા કરીને ફોટો પસંદ કરો.");return null;}
+ return new Promise((resolve,reject)=>{
+  const reader=new FileReader();
+  reader.onload=()=>{
+   const img=new Image();
+   img.onload=()=>{
+    const max=900;
+    let w=img.width,h=img.height;
+    if(w>max||h>max){const r=Math.min(max/w,max/h);w=Math.round(w*r);h=Math.round(h*r);}
+    const c=document.createElement("canvas");c.width=w;c.height=h;
+    const ctx=c.getContext("2d");ctx.drawImage(img,0,0,w,h);
+    let quality=.68, data=c.toDataURL("image/jpeg",quality);
+    while(data.length>700000 && quality>.35){quality-=.07;data=c.toDataURL("image/jpeg",quality);}
+    if(data.length>850000){reject(new Error("ફોટો બહુ મોટો છે. કૃપા કરીને નાનો ફોટો પસંદ કરો."));return;}
+    resolve(data);
+   };
+   img.onerror=()=>reject(new Error("ફોટો વાંચી શકાયો નથી."));
+   img.src=reader.result;
+  };
+  reader.onerror=()=>reject(new Error("ફોટો વાંચવામાં સમસ્યા."));
+  reader.readAsDataURL(file);
+ });
+}
+window.addWork=async()=>{
+ const title=workTitle.value.trim(), details=workDetails.value.trim(), status=document.getElementById('workStatus').value, file=document.getElementById("workPhoto").files[0];
+ if(!title) return alert("કામનું નામ લખો.");
+ const btn=document.getElementById("workAddBtn");btn.disabled=true;btn.textContent="ફોટો તૈયાર થઈ રહ્યો છે...";
+ try{
+  const photo=await photoToDataUrl(file);
+  await addDoc(collection(db,"works"),{title,details,status,photo:photo||"",createdAt:serverTimestamp()});
+  alert("વિકાસ કામ અને ફોટો સફળતાપૂર્વક ઉમેરાયા.");
+  workTitle.value="";workDetails.value="";document.getElementById('workStatus').value='ચાલુ';document.getElementById("workPhoto").value="";loadAll();
+ }catch(e){alert(e.message||"વિકાસ કામ ઉમેરવામાં સમસ્યા.");}
+ finally{btn.disabled=false;btn.textContent="Add વિકાસ કામ";}
+};
+
+async function renderCollection(col,target){
+ const el=document.getElementById(target); el.innerHTML="લોડ થઈ રહ્યું છે...";
+ try{
+   const snap=await getDocs(collection(db,col)); el.innerHTML="";
+   if(col==='works'){const docs=snap.docs.map(d=>d.data());const c={ચાલુ:0,પૂર્ણ:0,બાકી:0};docs.forEach(x=>{const st=workStatus(x);if(c[st]!==undefined)c[st]++;else c.ચાલુ++;});const a=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};a('adminTotalWorks',docs.length);a('adminCurrentWorks',c.ચાલુ);a('adminDoneWorks',c.પૂર્ણ);a('adminPendingWorks',c.બાકી);}
+   if(snap.empty){el.innerHTML='<div class="muted">હાલમાં કોઈ માહિતી નથી.</div>';return;}
+   snap.forEach(d=>{
+     const x=d.data(), div=document.createElement("div"); div.className="item";
+     div.innerHTML="<b></b><p></p><p class='muted workAdminStatus'></p><button class='danger'>Delete</button>";
+     div.querySelector("b").textContent=x.title||"";
+     div.querySelector("p").textContent=x.details||"";div.querySelector('.workAdminStatus').textContent='સ્થિતિ: '+workStatusLabel(workStatus(x));
+     if(col==="works" && x.photo){const img=document.createElement("img");img.src=x.photo;img.alt="વિકાસ કામનો ફોટો";img.style.width="100%";img.style.maxHeight="260px";img.style.objectFit="cover";img.style.borderRadius="10px";img.style.margin="8px 0";div.insertBefore(img,div.querySelector("button"));}
+     div.querySelector("button").onclick=async()=>{if(confirm("Delete કરવું છે?")){await deleteDoc(doc(db,col,d.id));loadAll();}};
+     el.appendChild(div);
+   });
+ }catch(e){el.innerHTML='<div class="error">લોડ error: '+e.message+'</div>';}
+}
+async function loadComplaints(){
+ const el=document.getElementById("complaintList");el.innerHTML="લોડ થઈ રહ્યું છે...";
+ try{
+  const snap=await getDocs(collection(db,"complaints"));el.innerHTML="";
+  if(snap.empty){el.innerHTML='<div class="muted">કોઈ ફરિયાદ નથી.</div>';return;}
+  snap.forEach(d=>{
+   const x=d.data();
+   const statusRef=doc(db,"complaint_status",d.id); const statusSnap=await getDoc(statusRef);
+   if(!statusSnap.exists()) await setDoc(statusRef,{status:x.status||"નવી ફરિયાદ",adminAction:x.adminAction||"હજી કાર્યવાહી શરૂ થઈ નથી.",type:x.type||"",updatedAt:serverTimestamp()});
+   const div=document.createElement("div");div.className="item";
+   div.innerHTML="<b></b><p></p><p></p><p></p><label>ફરિયાદની સ્થિતિ</label><select class='complaintStatusSelect'><option>નવી ફરિયાદ</option><option>તપાસ હેઠળ</option><option>કાર્યवाही ચાલુ</option><option>ઉકેલાઈ</option><option>બંધ</option></select><label>કરવામાં આવેલી કાર્યવાહી / જવાબ</label><textarea class='complaintAction' rows='3' placeholder='ફરિયાદ પર શું કાર્યવાહી થઈ તે લખો'></textarea><div class='row'><button class='primary saveComplaint'>💾 સ્થિતિ સાચવો</button><button class='danger deleteComplaint'>🗑️ Delete</button></div><div class='muted'>ફરિયાદ ID: <b class='cid'></b></div>";
+   const ps=div.querySelectorAll("p");div.querySelector("b").textContent=(x.name||"")+" • "+(x.type||"");
+   ps[0].textContent="મોબાઇલ: "+(x.mobile||"");ps[1].textContent=x.detail||"";ps[2].textContent="હાલની સ્થિતિ: "+(x.status||"નવી ફરિયાદ");
+   div.querySelector('.cid').textContent=x.complaintId||d.id;
+   div.querySelector('.complaintStatusSelect').value=x.status||"નવી ફરિયાદ";
+   div.querySelector('.complaintAction').value=x.adminAction||"";
+   div.querySelector('.saveComplaint').onclick=async()=>{
+     const status=div.querySelector('.complaintStatusSelect').value, adminAction=div.querySelector('.complaintAction').value.trim();
+     try{
+       await updateDoc(doc(db,"complaints",d.id),{status,adminAction,updatedAt:serverTimestamp()});
+       await setDoc(doc(db,"complaint_status",d.id),{status,adminAction,type:x.type||"",updatedAt:serverTimestamp()},{merge:true});
+       alert('ફરિયાદની સ્થિતિ અને કાર્યવાહી સાચવાઈ ગઈ.');loadComplaints();loadHomeHighlights();
+     }catch(e){alert('સાચવવામાં error: '+e.message)}
+   };
+   div.querySelector(".deleteComplaint").onclick=async()=>{if(confirm("ફરિયાદ delete કરવી છે?")){await deleteDoc(doc(db,"complaints",d.id));await deleteDoc(doc(db,"complaint_status",d.id)).catch(()=>{});loadComplaints();loadHomeHighlights();}};
+   el.appendChild(div);
+  });
+ }catch(e){el.innerHTML='<div class="error">લોડ error: '+e.message+'</div>';}
+}
+async function loadPanchayat(){
+ const el=document.getElementById("publicPanchayat"); if(!el)return;
+ try{
+  const snap=await getDoc(doc(db,"settings","panchayat"));
+  const x=snap.exists()?snap.data():{};
+  let html='';
+  if(x.sarpanchName){html+='<div class="item"><b>સરપંચશ્રી</b><p>'+escapeHtml(x.sarpanchName)+'</p>'+(x.sarpanchMobile?'<p>📞 <a href="tel:'+escapeHtml(x.sarpanchMobile)+'">'+escapeHtml(x.sarpanchMobile)+'</a></p>':'')+'</div>';}
+  const members=Array.isArray(x.members)?x.members:[];
+  if(members.length){html+='<h3>👥 ગ્રામ પંચાયતના સભ્યો</h3>';members.forEach(m=>{html+='<div class="item"><b>'+escapeHtml(m.name||'')+'</b><p>વોર્ડ નંબર: '+escapeHtml(m.ward||'')+'</p>'+(m.mobile?'<p>📞 <a href="tel:'+escapeHtml(m.mobile)+'">'+escapeHtml(m.mobile)+'</a></p>':'')+'</div>';});}
+  el.innerHTML=html||'<div class="muted">પંચાયતની માહિતી હજી ઉમેરાઈ નથી.</div>';
+ }catch(e){el.innerHTML='<div class="error">પંચાયતની માહિતી લોડ કરવામાં સમસ્યા.</div>';console.error(e);}
+}
+function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+async function loadPanchayatAdmin(){
+ try{
+  const snap=await getDoc(doc(db,"settings","panchayat")); const x=snap.exists()?snap.data():{};
+  document.getElementById("sarpanchName").value=x.sarpanchName||'';
+  document.getElementById("sarpanchMobile").value=x.sarpanchMobile||'';
+  renderMembersAdmin(Array.isArray(x.members)?x.members:[]);loadContactAdmin();
+ }catch(e){document.getElementById("memberList").innerHTML='<div class="error">લોડ error: '+e.message+'</div>';}
+}
+function renderMembersAdmin(members){
+ const el=document.getElementById("memberList");el.innerHTML='';
+ if(!members.length){el.innerHTML='<div class="muted">હજી કોઈ સભ્ય ઉમેર્યો નથી.</div>';return;}
+ members.forEach((m,i)=>{
+  const d=document.createElement('div');d.className='item';
+  d.innerHTML='<b></b><p></p><p></p><div class="row"><button class="secondary editMember">✏️ બદલો</button><button class="danger delMember">🗑️ દૂર કરો</button></div>';
+  d.querySelector('b').textContent=m.name||'';d.querySelectorAll('p')[0].textContent='વોર્ડ નંબર: '+(m.ward||'');d.querySelectorAll('p')[1].textContent='મોબાઇલ: '+(m.mobile||'');
+  d.querySelector('.editMember').onclick=()=>{document.getElementById('editIndex').value=i;document.getElementById('memberName').value=m.name||'';document.getElementById('memberWard').value=m.ward||'';document.getElementById('memberMobile').value=m.mobile||'';document.getElementById('memberSaveBtn').textContent='✏️ સભ્યની માહિતી સાચવો';};
+  d.querySelector('.delMember').onclick=async()=>{if(!confirm('આ સભ્ય દૂર કરવો છે?'))return;const current=await getDoc(doc(db,'settings','panchayat'));const arr=current.exists()&&Array.isArray(current.data().members)?current.data().members:[];arr.splice(i,1);await setDoc(doc(db,'settings','panchayat'),{members:arr},{merge:true});loadPanchayatAdmin();loadPanchayat();};
+  el.appendChild(d);
+ });
+}
+window.editSarpanch=()=>{
+ document.getElementById('sarpanchName').focus();
+ document.getElementById('sarpanchName').scrollIntoView({behavior:'smooth',block:'center'});
+ alert('સરપંચની માહિતી હવે બદલી શકો છો. નામ/મોબાઇલ બદલીને Save દબાવો.');
+};
+window.deleteSarpanch=async()=>{
+ if(!confirm('સરપંચની માહિતી દૂર કરવી છે?')) return;
+ const ref=doc(db,'settings','panchayat'); const snap=await getDoc(ref); const old=snap.exists()?snap.data():{};
+ await setDoc(ref,{sarpanchName:'',sarpanchMobile:'',members:Array.isArray(old.members)?old.members:[]},{merge:true});
+ document.getElementById('sarpanchName').value=''; document.getElementById('sarpanchMobile').value='';
+ alert('સરપંચની માહિતી દૂર થઈ ગઈ.'); loadPanchayatAdmin(); loadPanchayat();
+};
+window.saveSarpanch=async()=>{
+ const name=document.getElementById('sarpanchName').value.trim(),mobile=document.getElementById('sarpanchMobile').value.trim();
+ if(!name)return alert('સરપંચનું નામ લખો.');
+ const ref=doc(db,'settings','panchayat');const snap=await getDoc(ref);const old=snap.exists()?snap.data():{};
+ await setDoc(ref,{sarpanchName:name,sarpanchMobile:mobile,members:Array.isArray(old.members)?old.members:[]},{merge:true});
+ alert('સરપંચની માહિતી સાચવાઈ ગઈ.');loadPanchayat();
+};
+window.saveMember=async()=>{
+ const name=document.getElementById('memberName').value.trim(),ward=document.getElementById('memberWard').value.trim(),mobile=document.getElementById('memberMobile').value.trim();
+ if(!name)return alert('સભ્યનું નામ લખો.');
+ const ref=doc(db,'settings','panchayat');const snap=await getDoc(ref);const data=snap.exists()?snap.data():{};const arr=Array.isArray(data.members)?[...data.members]:[];const idx=parseInt(document.getElementById('editIndex').value,10);
+ const member={name,ward,mobile}; if(Number.isInteger(idx)&&idx>=0&&idx<arr.length)arr[idx]=member;else arr.push(member);
+ await setDoc(ref,{sarpanchName:data.sarpanchName||'',sarpanchMobile:data.sarpanchMobile||'',members:arr},{merge:true});
+ alert(Number.isInteger(idx)&&idx>=0?'સભ્યની માહિતી બદલાઈ ગઈ.':'સભ્ય ઉમેરાઈ ગયો.');
+ document.getElementById('memberName').value='';document.getElementById('memberWard').value='';document.getElementById('memberMobile').value='';document.getElementById('editIndex').value='';document.getElementById('memberSaveBtn').textContent='➕ સભ્ય ઉમેરો';loadPanchayatAdmin();loadPanchayat();
+};
+async function loadContact(){
+ try{
+  const snap=await getDoc(doc(db,"settings","panchayat")); const x=snap.exists()?snap.data():{};
+  const el=document.getElementById("publicContact"); if(!el)return;
+  let html='<p><b>ફરંગટા ગ્રામ પંચાયત</b></p>';
+  if(x.contactName) html+='<p>સંપર્ક વ્યક્તિ: '+escapeHtml(x.contactName)+'</p>';
+  if(x.contactMobile) html+='<p>📞 <a href="tel:'+escapeHtml(x.contactMobile)+'">'+escapeHtml(x.contactMobile)+'</a></p>';
+  if(x.address) html+='<p>📍 '+escapeHtml(x.address)+'</p>';
+  if(x.mapUrl){ html+='<p><a class="primary" style="display:inline-block;text-decoration:none" href="'+escapeHtml(x.mapUrl)+'" target="_blank" rel="noopener">🗺️ Google Mapsમાં સ્થાન જુઓ</a></p>'; }
+  el.innerHTML=html;
+ }catch(e){document.getElementById("publicContact").innerHTML='<div class="error">સંપર્ક માહિતી લોડ કરવામાં સમસ્યા.</div>';}
+}
+async function loadContactAdmin(){
+ try{const snap=await getDoc(doc(db,"settings","panchayat"));const x=snap.exists()?snap.data():{};
+  document.getElementById("contactName").value=x.contactName||x.sarpanchName||'';
+  document.getElementById("contactMobile").value=x.contactMobile||x.sarpanchMobile||'';
+  document.getElementById("contactAddress").value=x.address||'ફરંગટા, તા-માંગરોળ, જિ-જૂનાગઢ, પિન કોડ - 362240';
+  document.getElementById("mapUrl").value=x.mapUrl||'';
+ }catch(e){console.error(e);}
+}
+window.saveContact=async()=>{
+ const contactName=document.getElementById('contactName').value.trim(),contactMobile=document.getElementById('contactMobile').value.trim(),address=document.getElementById('contactAddress').value.trim(),mapUrl=document.getElementById('mapUrl').value.trim();
+ if(!contactName||!contactMobile)return alert('સંપર્ક વ્યક્તિનું નામ અને મોબાઇલ નંબર લખો.');
+ const ref=doc(db,'settings','panchayat');const snap=await getDoc(ref);const old=snap.exists()?snap.data():{};
+ await setDoc(ref,{contactName,contactMobile,address,mapUrl,sarpanchName:old.sarpanchName||'',sarpanchMobile:old.sarpanchMobile||'',members:Array.isArray(old.members)?old.members:[]},{merge:true});
+ alert('સંપર્ક માહિતી સાચવાઈ ગઈ.');loadContactAdmin();loadContact();
+};
+window.editContact=()=>{document.getElementById('contactName').focus();document.getElementById('contactName').scrollIntoView({behavior:'smooth',block:'center'});alert('સંપર્ક માહિતી હવે બદલી શકો છો. બદલીને Save દબાવો.');};
+window.deleteContact=async()=>{if(!confirm('સંપર્ક માહિતી અને Google Maps link દૂર કરવા છે?'))return;const ref=doc(db,'settings','panchayat');const snap=await getDoc(ref);const old=snap.exists()?snap.data():{};await setDoc(ref,{contactName:'',contactMobile:'',address:'',mapUrl:'',sarpanchName:old.sarpanchName||'',sarpanchMobile:old.sarpanchMobile||'',members:Array.isArray(old.members)?old.members:[]},{merge:true});loadContactAdmin();loadContact();alert('સંપર્ક માહિતી દૂર થઈ ગઈ.');};
+async function loadAll(){renderCollection("notices","noticeList");renderCollection("news","newsList");renderCollection("works","workList");loadComplaints();loadPanchayatAdmin();loadContact();loadHomeHighlights();}
+loadPanchayat();
+
+window.submitComplaint=async()=>{
+ const name=document.getElementById("name").value.trim(), mobile=document.getElementById("mobile").value.trim(), type=document.getElementById("type").value, detail=document.getElementById("detail").value.trim();
+ if(!name||!mobile||!detail){alert("કૃપા કરીને જરૂરી માહિતી ભરો.");return}
+ try{
+  const existing=await getDocs(collection(db,"complaint_status"));
+  let maxNo=0; existing.forEach(s=>{const n=parseInt(s.data().complaintId,10);if(Number.isFinite(n)&&n>maxNo)maxNo=n;});
+  const complaintId=String(36224000+(maxNo?Math.max(1,maxNo-36224000+1):1));
+  const ref=await addDoc(collection(db,"complaints"),{complaintId,name,mobile,type,detail,status:"નવી ફરિયાદ",adminAction:"હજી કાર્યવાહી શરૂ થઈ નથી.",createdAt:serverTimestamp(),updatedAt:serverTimestamp()});
+  await setDoc(doc(db,"complaint_status",ref.id),{complaintId,status:"નવી ફરિયાદ",adminAction:"હજી કાર્યવાહી શરૂ થઈ નથી.",type,updatedAt:serverTimestamp()});
+  document.getElementById("result").innerHTML='<div class="success">ફરિયાદ સફળતાપૂર્વક નોંધાઈ.<br>તમારો ફરિયાદ ID: <b>'+complaintId+'</b><br><span class="muted">આ ID સાચવી રાખજો. આગળથી તમારી ફરિયાદની સ્થિતિ અહીં જોઈ શકશો.</span></div>';
+  document.getElementById("name").value="";document.getElementById("mobile").value="";document.getElementById("detail").value="";
+ }catch(e){document.getElementById("result").innerHTML='<div class="error">ફરિયાદ મોકલવામાં error: '+e.message+'</div>';}
+};
+window.trackComplaint=async()=>{
+ const id=document.getElementById('trackId').value.trim(),out=document.getElementById('trackResult');
+ if(!id){out.innerHTML='<div class="error">ફરિયાદ ID નાખો.</div>';return;}
+ out.innerHTML='લોડ થઈ રહ્યું છે...';
+ try{
+  const q=query(collection(db,'complaint_status'),where('complaintId','==',id));
+  const snap=await getDocs(q);
+  if(snap.empty){out.innerHTML='<div class="error">આ ફરિયાદ ID મળ્યો નથી.</div>';return;}
+  const x=snap.docs[0].data();
+  out.innerHTML='<div class="complaintStatus"><b>ફરિયાદની હાલની સ્થિતિ: '+escapeHtml(x.status||'નવી ફરિયાદ')+'</b><div class="actionBox"><b>પંચાયત દ્વારા કરવામાં આવેલી કાર્યવાહી:</b><br>'+escapeHtml(x.adminAction||'હજી કોઈ કાર્યવાહી નોંધાઈ નથી.')+'</div></div>';
+ }catch(e){out.innerHTML='<div class="error">સ્થિતિ લોડ કરવામાં સમસ્યા: '+escapeHtml(e.message)+'</div>';}
+};
+</script>
+</head>
+<body>
+<div class="top"><div class="brand"><div class="logo">🏘️</div><div><div class="en">Farangta Gram Panchayat</div><h1 class="guj">ફરંગટા ગ્રામ પંચાયત</h1><div class="tag">ગામનો વિકાસ • ગામની પારદર્શિતા • ગામની લોકભાગીદારી</div></div><div class="topmeta"><div class="metaItem">📍 ફરંગટા, તા. માંગરોળ, જિ. જૂનાગઢ</div><div class="metaItem">📅 આજની તારીખ</div><button class="adminBtn" onclick="show('admin',null)">👤 Admin Login</button></div></div></div>
+<nav>
+<button class="active" onclick="show('home',this)">🏠 મુખ્ય પાનું</button><button onclick="show('panchayat',this)">👥 ગામની માહિતી</button><button onclick="show('works',this)">🏗️ વિકાસ કામો</button><button onclick="show('publicNews',this)">📰 સમાચાર</button><button onclick="show('notices',this)">📢 જાહેર સૂચના</button><button onclick="show('complaint',this)">📝 ફરિયાદ / Complaint</button><button onclick="show('contact',this)">📞 સંપર્ક</button><button onclick="show('admin',this)">🔐 Admin</button>
+</nav>
+<main>
+<section id="home">
+<div class="hero"><div class="heroInner"><h2>ફરંગટા ગ્રામ પંચાયતમાં આપનું સ્વાગત છે</h2><p>ગામના વિકાસ કામો, સમાચાર, જાહેર સૂચનાઓ, પંચાયતની માહિતી અને ફરિયાદ સેવા — હવે એક જ જગ્યાએ.</p><div class="stats"><h3>📊 વિકાસ કામોની માહિતી</h3><div class="statline"><span>🏗️ કુલ કામો</span><b id="statWorks">—</b></div><div class="statline"><span>🟢 ચાલુ કામો</span><b id="statCurrent">—</b></div><div class="statline"><span>🔵 પૂર્ણ થયેલા</span><b id="statDone">—</b></div><div class="statline"><span>🟠 બાકી કામો</span><b id="statPending">—</b></div><div class="statline"><span>📰 સમાચાર</span><b id="statNews">—</b></div><div class="statline"><span>📢 સૂચનાઓ</span><b id="statNotices">—</b></div><div class="statline"><span>📝 કુલ ફરિયાદો</span><b id="statComplaints">—</b></div><div class="statline"><span>🟡 તપાસ/કાર્યवाही</span><b id="statActionComplaints">—</b></div><div class="statline"><span>✅ ઉકેલાઈ/બંધ</span><b id="statResolvedComplaints">—</b></div></div></div></div>
+<div class="quick"><div class="tile" onclick="show('works')"><b>🏗️ વિકાસ કામો</b><span>ચાલુ અને પૂર્ણ થયેલા કામો તથા ફોટા</span></div><div class="tile" onclick="show('publicNews')"><b>📰 સમાચાર</b><span>ગામની નવીન માહિતી</span></div><div class="tile" onclick="show('panchayat')"><b>👥 ગ્રામ પંચાયત</b><span>સરપંચ અને સભ્યોની માહિતી</span></div><div class="tile" onclick="show('complaint')"><b>📝 ફરિયાદ કરો</b><span>ફરિયાદ નોંધાવો અને IDથી સ્થિતિ જુઓ</span></div></div>
+<div class="sectionHead"><h2>🏗️ વિકાસ કામોની ઝલક</h2><span class="more" onclick="show('works')">બધા કામો જુઓ →</span></div>
+<div id="homeWorks"></div>
+<div class="sectionHead"><h2>📷 કામોના ફોટા</h2><span class="more" onclick="show('works')">બધા ફોટા જુઓ →</span></div>
+<div id="homeGallery" class="gallery"></div>
+<div class="two"><div class="callout"><h3>📞 સંપર્ક કરો</h3><p>ગ્રામ પંચાયત સાથે સીધો સંપર્ક કરો.</p><button class="primary" onclick="show('contact')">સંપર્ક માહિતી જુઓ</button></div><div class="callout"><h3>🗺️ ગામનું સ્થાન</h3><p>Google Maps પર ફરંગટા ગ્રામ પંચાયતનું સ્થાન જુઓ.</p><button class="primary" onclick="show('contact')">Maps ખોલો</button></div></div>
+</section>
+<section id="works" class="hidden"><div class="sectionHead"><h2>🏗️ ગામના વિકાસ કામો</h2></div><div id="publicWorks">Adminમાંથી ઉમેરેલી માહિતી અહીં દેખાશે.</div></section>
+<section id="complaint" class="hidden"><div class="card"><h2>📝 ફરિયાદ નોંધાવો</h2><label>તમારું નામ</label><input id="name" placeholder="નામ લખો"><label>મોબાઇલ નંબર</label><input id="mobile" type="tel" placeholder="મોબાઇલ નંબર"><label>ફરિયાદનો પ્રકાર</label><select id="type"><option>રસ્તો</option><option>પાણી</option><option>લાઇટ</option><option>સફાઈ</option><option>ગટર</option><option>અન્ય</option></select><label>ફરિયાદની વિગત</label><textarea id="detail" rows="4" placeholder="તમારી સમસ્યા લખો"></textarea><button class="primary" onclick="submitComplaint()">ફરિયાદ મોકલો</button><div id="result"></div><div class="trackBox"><h3>🔎 તમારી ફરિયાદની સ્થિતિ જુઓ</h3><p class="muted">ફરિયાદ નોંધાવ્યા પછી મળેલો <b>ફરિયાદ ID</b> અહીં નાખો.</p><input id="trackId" placeholder="ફરિયાદ ID નાખો"><button class="secondary" onclick="trackComplaint()">🔎 સ્થિતિ જુઓ</button><div id="trackResult"></div></div></div></section>
+<section id="notices" class="hidden"><div class="sectionHead"><h2>📢 જાહેર સૂચનાઓ</h2></div><div id="publicNotices">હાલમાં કોઈ નવી સૂચના નથી.</div></section>
+<section id="publicNews" class="hidden"><div class="sectionHead"><h2>📰 સમાચાર</h2></div><div id="publicNewsList">હાલમાં કોઈ સમાચાર નથી.</div></section>
+<section id="panchayat" class="hidden"><div class="sectionHead"><h2>👥 ગ્રામ પંચાયતની માહિતી</h2></div><div class="card"><div id="publicPanchayat">માહિતી લોડ થઈ રહી છે...</div></div></section>
+<section id="contact" class="hidden"><div class="sectionHead"><h2>📞 સંપર્ક અને Google Maps</h2></div><div class="card"><div id="publicContact">સંપર્ક માહિતી લોડ થઈ રહી છે...</div></div></section>
+<section id="admin" class="hidden"><div class="card"><h2>🔐 Admin Panel</h2><div id="adminArea"><button class="primary" onclick="login()">🔐 Google થી Admin Login</button></div><div id="adminMsg"></div></div>
+<div id="dashboard" class="hidden">
+<div class="card"><h3>📢 જાહેરાત ઉમેરો</h3><input id="noticeTitle" placeholder="જાહેરાતનું શીર્ષક"><textarea id="noticeDetails" placeholder="વિગત"></textarea><button class="primary" onclick="addNotice()">Add</button><div id="noticeList"></div></div>
+<div class="card"><h3>📰 સમાચાર ઉમેરો</h3><input id="newsTitle" placeholder="સમાચારનું શીર્ષક"><textarea id="newsDetails" placeholder="વિગત"></textarea><button class="primary" onclick="addNews()">Add</button><div id="newsList"></div></div>
+<div class="card"><h3>📊 વિકાસ કામોના આંકડા</h3><div class="two"><div class="item"><b>કુલ કામો</b><p id="adminTotalWorks">—</p></div><div class="item"><b>🟢 ચાલુ</b><p id="adminCurrentWorks">—</p></div><div class="item"><b>🔵 પૂર્ણ</b><p id="adminDoneWorks">—</p></div><div class="item"><b>🟠 બાકી</b><p id="adminPendingWorks">—</p></div></div></div><div class="card"><h3>🏗️ વિકાસ કામ ઉમેરો</h3><input id="workTitle" placeholder="કામનું નામ"><textarea id="workDetails" placeholder="વિગત, રકમ, સ્થળ વગેરે"></textarea><label>કામની સ્થિતિ</label><select id="workStatus"><option value="ચાલુ">ચાલુ</option><option value="પૂર્ણ">પૂર્ણ</option><option value="બાકી">બાકી</option></select><label>📷 કામનો ફોટો (મોબાઇલ Galleryમાંથી)</label><input id="workPhoto" type="file" accept="image/*"><div class="muted">ફોટો નાનો કરીને websiteમાં સાચવાશે.</div><button id="workAddBtn" class="primary" onclick="addWork()">Add વિકાસ કામ</button><div id="workList"></div></div>
+<div class="card"><h3>🏛️ સરપંચ અને ગ્રામ પંચાયત સભ્યો</h3><label>સરપંચનું નામ</label><input id="sarpanchName" placeholder="સરપંચનું નામ"><label>સરપંચનો મોબાઇલ નંબર</label><input id="sarpanchMobile" type="tel" placeholder="મોબાઇલ નંબર"><div class="row"><button class="primary" onclick="saveSarpanch()">💾 સરપંચની માહિતી સાચવો</button><button class="secondary" onclick="editSarpanch()">✏️ સરપંચની માહિતી બદલો</button><button class="danger" onclick="deleteSarpanch()">🗑️ સરપંચ દૂર કરો</button></div><hr style="border:0;border-top:1px solid #ddd;margin:18px 0"><h4>👥 સભ્ય ઉમેરો / બદલો</h4><input type="hidden" id="editIndex"><label>સભ્યનું નામ</label><input id="memberName" placeholder="સભ્યનું નામ"><label>વોર્ડ નંબર</label><input id="memberWard" placeholder="વોર્ડ નંબર"><label>સભ્યનો મોબાઇલ નંબર</label><input id="memberMobile" type="tel" placeholder="મોબાઇલ નંબર"><button id="memberSaveBtn" class="primary" onclick="saveMember()">➕ સભ્ય ઉમેરો</button><div id="memberList"></div></div>
+<div class="card"><h3>📞 સંપર્ક અને 🗺️ Google Maps</h3><label>સંપર્ક વ્યક્તિનું નામ</label><input id="contactName" placeholder="જેમ કે સરપંચશ્રી"><label>સંપર્ક મોબાઇલ નંબર</label><input id="contactMobile" type="tel" placeholder="મોબાઇલ નંબર"><label>પંચાયતનું સરનામું</label><textarea id="contactAddress" rows="3" placeholder="સરનામું"></textarea><label>Google Maps Link</label><input id="mapUrl" type="url" placeholder="Google Mapsમાંથી Copy link અહીં Paste કરો"><div class="row"><button class="primary" onclick="saveContact()">💾 સંપર્ક માહિતી સાચવો</button><button class="secondary" onclick="editContact()">✏️ બદલો</button><button class="danger" onclick="deleteContact()">🗑️ Delete</button></div><div class="muted">Google Mapsમાં Share → Copy link કરો અને અહીં Paste કરો.</div></div>
+<div class="card"><h3>📝 ફરિયાદો</h3><div id="complaintList"></div></div>
+</div></section>
+</main>
+<footer><div class="foot"><div><b>Farangta Gram Panchayat</b><br><small>ફરંગટા ગ્રામ પંચાયત • ડિજિટલ સેવા</small></div><div>📍 ફરંગટા, તા. માંગરોળ, જિ. જૂનાગઢ</div><div>📞 સંપર્ક માટે websiteના સંપર્ક વિભાગમાં જુઓ</div><div>© ગ્રામ પંચાયત</div></div></footer>
+</body></html>
